@@ -102,7 +102,7 @@ def main():
     # Create robot object with an image client.
     sdk = bosdyn.client.create_standard_sdk('image_capture')
     robot = sdk.create_robot(options.hostname)
-    bosdyn.client.util.authenticate(robot)
+    robot.authenticate("Bumble-Bee", "Bumble-Bee1!")
     robot.sync_with_directory()
     robot.time_sync.wait_for_sync()
 
